@@ -13,7 +13,7 @@
   <script>
       grist.ready();
       grist.onRecord(function(record) {
-        document.getElementById('isao8').innerHTML = record.A;
+        document.getElementById('isao8').innerHTML = new Intl.NumberFormat('en-GB', {style: 'currency',currency: 'GBP',}).format(record.A);
       });
   </script>
 </body>
